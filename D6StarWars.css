@@ -7,13 +7,14 @@
     background-color: black;
     background-repeat: repeat;
     color:white;
+	min-width:650px;
 }
 
-.charsheet .sheet-version::after {
-    content: 'Sheet Version 1.81';
+.charsheet .sheet-version::after { /*  --->  SHEET VERSION  <---  */
+    content: 'Sheet Version 2.00WIP';
 }
  
-.charsheet label, h1, h2, h3{
+.charsheet label, h1, h2, h3, p{
     color:white;
 }
  
@@ -35,6 +36,8 @@
     padding-top:10px;
     padding-bottom:10px;
 	width: 100%;
+	min-width:600px;
+	color:white;
 }
 
 .charsheet input[type=number].sheet-pipnumber{
@@ -88,6 +91,11 @@
     margin-left:3px;
 }
 
+.charsheet .sheet-underline{
+	text-decoration:underline;
+	text-align: center;
+}
+
 .charsheet .sheet-right{
     float:right;
 }
@@ -104,6 +112,7 @@
 .charsheet .sheet-tdborder{
     border: 2px solid white;
     vertical-align:top;
+	color:white;
     /*width:260px;*/
 }
 
@@ -118,25 +127,27 @@
     padding-bottom:2px;
     margin:0px;
     display: inline-block;
-    float:right;
 }
 
 .charsheet select.sheet-mediumselect{ /*Used for Wound levels dropdown select*/
-    width:100px;
+    width:135px;
     height:25px;
     padding-top:2px;
     padding-bottom:2px;
     margin:0px;
     display: inline-block;
-    float:right;
 }
 
 .charsheet label.sheet-areaLabel{
     margin:0px;
 }
+
+.charsheet .sheet-footer{
+	text-align: center;
+	padding-top:10px;
+}
 /*-----------------------------------------*/
 /*----------Roll Buttons classes-----------*/
-
 .charsheet button[type=roll].sheet-d6-dice::before {	/*new die changes die roller to d6*/
 	font-family: 'dicefontd6',arial;
 	content: 'F ';
@@ -153,7 +164,6 @@
     color: red;
 }
 /*Original button :button[type=roll].sheet-blank-roll-button::before { content: ''; } */
-
 /*-------------------------------------------*/
 /*-----Main Settings and hide classes--------*/
 /*-----------(from GUMSHOE Official)---------*/
@@ -186,8 +196,8 @@ div.sheet-main-settings {
 
 input.sheet-options-flag:checked ~ div.sheet-main-settings {
 	display: inline-block;
-	width: 600px;
-	height: 500px;
+	width: 800px;
+	height: 400px;
 }
 
 input.sheet-selector-switch ,
@@ -196,18 +206,15 @@ input.sheet-options-flag:checked ~ div.sheet-main-container {
 }
 
 /* all hide options using option menu checkboxes*/
-/*input.sheet-wild:checked ~ .sheet-master-container .sheet-wild-hide,
-input.sheet-nowild:checked ~ .sheet-master-container .sheet-nowild-hide, */
-
+input.sheet-wilddie:checked ~ .sheet-master-container .sheet-wild-hide,
 input.sheet-background:checked  ~ .sheet-master-container .sheet-background-hide,
 input.sheet-force:checked ~ .sheet-master-container .sheet-force-hide,
-input.sheet-equipment:checked ~ .sheet-master-container .sheet-equipment-hide,
-input.sheet-npc:checked  ~ .sheet-master-container .sheet-npc-hide ,
+input.sheet-equipment:checked  ~ .sheet-master-container .sheet-equipment-hide,
+input.sheet-npc:checked ~ .sheet-master-container .sheet-npc-hide ,
 input.sheet-npc:not(:checked) ~ .sheet-master-container .sheet-pc-hide,
-input.sheet-gmroll:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-gmroll-hide {
+input.sheet-gmroll:checked  ~ .sheet-master-container .sheet-gmroll-hide {
 	display: none;
 }
-
 /*-------------------------------------------*/
 /*------------- General Styles---------------*/
 /*------------(from GUMSHOE Official)--------*/
@@ -222,6 +229,8 @@ input[type=number]::-webkit-inner-spin-button {}
 	background-image: url(https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_960_720.png); /*black space with tiny stars*/
     background-color: black;
     background-repeat: repeat;
+	min-width:500px;
+	min-height:400px;
 }
 
 .sheet-container {
@@ -300,6 +309,72 @@ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-content .sh
 
 input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-content .sheet-options-flag:checked ~ .sheet-options {
 	display: block;
+}
+/*-------------------------------------------*/
+/*--------------- Tabs ----------------------*/
+/*---------(ported from Shadowrun 5e)--------*/
+
+.sheet-tabs{
+    opacity:0;
+    width:11%;
+    height:2em!important;
+}
+
+.sheet-tablabel{
+    margin-left:-11%;
+    width:11%;
+    text-align:center;
+    vertical-align:top;
+    color:#eeeeee;
+    background-color:#550000;
+    display:inline-block;
+    border-radius:5px;
+    margin-bottom:5em;
+}
+
+.sheet-tabs:checked + div.sheet-tablabel {
+    font-weight:700;
+}
+
+.sheet-tab1:checked + div.sheet-tablabel,
+.sheet-tab2:checked + div.sheet-tablabel,
+.sheet-tab3:checked + div.sheet-tablabel,
+.sheet-tab4:checked + div.sheet-tablabel,
+.sheet-tab5:checked + div.sheet-tablabel,
+.sheet-tab6:checked + div.sheet-tablabel,
+.sheet-tab7:checked + div.sheet-tablabel,
+.sheet-tab8:checked + div.sheet-tablabel{
+    color:#b199ee;
+	width:100%;
+}
+
+.sheet-content8{
+    color:#bbbbbb;
+	width:100%;
+}
+
+.sheet-content1, 
+.sheet-content2, 
+.sheet-content3, 
+.sheet-content4, 
+.sheet-content5, 
+.sheet-content6, 
+.sheet-content7, 
+.sheet-content8{
+    display:none;
+}
+
+input[type=radio].sheet-tab1:checked ~ div.sheet-content1,
+input[type=radio].sheet-tab2:checked ~ div.sheet-content2,
+input[type=radio].sheet-tab3:checked ~ div.sheet-content3,
+input[type=radio].sheet-tab4:checked ~ div.sheet-content4,
+input[type=radio].sheet-tab5:checked ~ div.sheet-content5,
+input[type=radio].sheet-tab6:checked ~ div.sheet-content6,
+input[type=radio].sheet-tab7:checked ~ div.sheet-content7,
+input[type=radio].sheet-tab8:checked ~ div.sheet-content8
+{
+    display:block;
+	width:800px;
 }
 
 /*-------------------------------------------*/
