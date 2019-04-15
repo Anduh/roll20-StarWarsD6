@@ -39,12 +39,9 @@
 
 .charsheet .sheet-flex-box{
 		display: flex;
-		flex: 0 50%;
-		/*align-items: center;
-    justify-content: center;
-    flex-flow: column wrap;
-    align-content: center;
-		flex-shrink: 0;*/
+}
+.charsheet .sheet-flex-col{
+    flex: 1;
 }
 
 .charsheet input[type=number].sheet-pipnumber{
@@ -114,7 +111,7 @@
 .charsheet .sheet-tdborder{
     border: 2px solid white;
     vertical-align:top;
-    width:260px;
+    width:320px;
 }
 
 .charsheet .sheet-rightmargin{
