@@ -148,8 +148,8 @@
 				<div class="flex-col">
 							<div class="tdborder"> <!---Dex Attribute --->
 										<div class="bold">
-											<button class="d6-dice" type='roll'value='&{template:blue} {{name=Dexterity}} {{Roll=[[(@{dexterity} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{dexteritypip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}' >Dexterity</button>
-											<button class="d6-dice gmroll gmroll-hide" type='roll'value='/w gm &{template:blue} {{name=Dexterity}} {{Roll=[[(@{dexterity} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{dexteritypip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}'><span class="redtxt">GM</span></button>
+											<button class="d6-dice" type="roll" value="&{template:blue} {{name=Dexterity}} {{Roll=[[(@{dexterity} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{dexteritypip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}" >Dexterity</button>
+											<button class="d6-dice gmroll gmroll-hide" type="roll" value="/w gm &{template:blue} {{name=Dexterity}} {{Roll=[[(@{dexterity} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{dexteritypip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}" ><span class="redtxt">GM</span></button>
 											<div style="float:right;">
 												<input type="number" name="attr_dexterity" class="smallnumber" min="1" value="3"/>D+<input type="number" name="attr_dexteritypip" class="pipnumber" min="0" max="2" value="0"/>
 											</div>
@@ -165,8 +165,8 @@
 							</div>
 							<div class="tdborder"> <!---Know Attribute --->
 										<div class="bold">
-											<button class="d6-dice" type='roll' value='&{template:blue} {{name=Knowledge}} {{Roll=[[(@{knowledge} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{knowledgepip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}' >Knowledge</button>
-											<button class="d6-dice gmroll gmroll-hide" type='roll' value='/w gm &{template:blue} {{name=Knowledge}} {{Roll=[[(@{knowledge} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{knowledgepip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}'><span class="redtxt">GM</span></button>
+											<button class="d6-dice" type="roll" value="&{template:blue} {{name=Knowledge}} {{Roll=[[(@{knowledge} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{knowledgepip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}" >Knowledge</button>
+											<button class="d6-dice gmroll gmroll-hide" type="roll" value="/w gm &{template:blue} {{name=Knowledge}} {{Roll=[[(@{knowledge} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{knowledgepip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span></button>
 											<div style="float:right;">
 												<input type="number" name="attr_knowledge" class="smallnumber" min="1" value="3"/>D+<input type="number" name="attr_knowledgepip" class="pipnumber" min="0" max="2" value="0"/>
 											</div>
@@ -182,8 +182,8 @@
 							</div>
 							<div class="tdborder"><!---Mech Attribute --->
 									<div class="bold">
-											<button class="d6-dice"  type='roll' value='&{template:blue} {{name=Mechanical}} {{Roll=[[(@{mechanical} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{mechanicalpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}'>Mechanical</button>
-											<button class="d6-dice gmroll gmroll-hide"  type='roll' value='/w gm &{template:blue} {{name=Mechanical}} {{Roll=[[(@{mechanical} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{mechanicalpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}' ><span class="redtxt">GM</span></button>
+											<button class="d6-dice"  type="roll" value="&{template:blue} {{name=Mechanical}} {{Roll=[[(@{mechanical} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{mechanicalpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}">Mechanical</button>
+											<button class="d6-dice gmroll gmroll-hide"  type="roll" value="/w gm &{template:blue} {{name=Mechanical}} {{Roll=[[(@{mechanical} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{mechanicalpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}" ><span class="redtxt">GM</span></button>
 											<div style="float:right;">
 												<input type="number" name="attr_mechanical" class="smallnumber" min="1" value="3"/>D+<input type="number" name="attr_mechanicalpip" class="pipnumber" min="0" max="2" value="0"/>
 											</div>
@@ -201,8 +201,8 @@
 				<div class="flex-col">
 							<div class="tdborder"><!---Perc Attribute --->
 								<div class="bold">
-										<button class="d6-dice" type='roll' value='&{template:blue} {{name=Perception}} {{Roll=[[(@{perception} -@{WoundMod} +@{Force_Up} +?{Dice mods|0} -1)d6cf0cs7 +@{perceptionpip} +?{Other Mods(pip)|0} +1d6!cf1cs6]]}}' >Perception</button>
-										<button class="d6-dice gmroll gmroll-hide" type='roll' value='/w gm &{template:blue} {{name=Perception}} {{Roll=[[(@{perception} -@{WoundMod} +@{Force_Up} +?{Dice mods|0} -1)d6cf0cs7 +@{perceptionpip} +?{Other Mods(pip)|0} +1d6!cf1cs6]]}}'><span class="redtxt">GM</span></button>
+										<button class="d6-dice" type="roll" value="&{template:blue} {{name=Perception}} {{Roll=[[(@{perception} -@{WoundMod} +@{Force_Up} +?{Dice mods|0} -1)d6cf0cs7 +@{perceptionpip} +?{Other Mods(pip)|0} +1d6!cf1cs6]]}}" >Perception</button>
+										<button class="d6-dice gmroll gmroll-hide" type="roll" value="/w gm &{template:blue} {{name=Perception}} {{Roll=[[(@{perception} -@{WoundMod} +@{Force_Up} +?{Dice mods|0} -1)d6cf0cs7 +@{perceptionpip} +?{Other Mods(pip)|0} +1d6!cf1cs6]]}}"><span class="redtxt">GM</span></button>
 										<div style="float:right;">
 											<input type="number" name="attr_perception" class="smallnumber"  min="1" value="3"/>D+<input type="number" name="attr_perceptionpip" class="pipnumber" min="0" max="2" value="0"/>
 										</div>
@@ -218,8 +218,8 @@
 							</div>
 							<div class="tdborder"><!---Str Attribute --->
 								<div class="bold">
-										<button class="d6-dice" type='roll' value='&{template:blue} {{name=Strength}} {{Roll=[[(@{strength} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{strengthpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}' >Strength</button>
-										<button class="d6-dice gmroll gmroll-hide" type='roll' value='/w gm &{template:blue} {{name=Strength}} {{Roll=[[(@{strength} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{strengthpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}'><span class="redtxt">GM</span></button>
+										<button class="d6-dice" type="roll" value="&{template:blue} {{name=Strength}} {{Roll=[[(@{strength} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{strengthpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}" >Strength</button>
+										<button class="d6-dice gmroll gmroll-hide" type="roll" value="/w gm &{template:blue} {{name=Strength}} {{Roll=[[(@{strength} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{strengthpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span></button>
 										<div style="float:right;">
 											<input type="number" name="attr_strength" class="smallnumber" min="1" value="3"/>D+<input type="number" name="attr_strengthpip" class="pipnumber" min="0" max="2" value="0"/>
 										</div>
@@ -235,8 +235,8 @@
 							</div>
 							<div class="tdborder"><!---Tech Attribute --->
 									<div class="bold">
-											<button class="d6-dice" type='roll' value='&{template:blue} {{name=Technical}} {{Roll=[[(@{technical} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{technicalpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}' >Technical</button>
-											<button class="d6-dice gmroll gmroll-hide" type='roll' value='/w gm &{template:blue} {{name=Technical}} {{Roll=[[(@{technical} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{technicalpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}'><span class="redtxt">GM</span></button>
+											<button class="d6-dice" type="roll" value="&{template:blue} {{name=Technical}} {{Roll=[[(@{technical} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{technicalpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}" >Technical</button>
+											<button class="d6-dice gmroll gmroll-hide" type="roll" value="/w gm &{template:blue} {{name=Technical}} {{Roll=[[(@{technical} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{technicalpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span></button>
 											<div style="float:right;">
 												<input type="number" name="attr_technical" class="smallnumber" min="1" value="3"/>D+<input type="number" name="attr_technicalpip" class="pipnumber" min="0" max="2" value="0"/>
 											</div>
