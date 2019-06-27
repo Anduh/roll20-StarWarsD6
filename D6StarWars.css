@@ -219,8 +219,8 @@ input.sheet-equipment:checked ~ .sheet-master-container .sheet-equipment-hide,
 input.sheet-npc:checked  ~ .sheet-master-container .sheet-npc-hide ,
 input.sheet-npc:not(:checked) ~ .sheet-master-container .sheet-pc-hide,
 input.sheet-gmroll:checked ~ .sheet-master-container .sheet-gmroll-hide,
-input.sheet-rollmod:checked ~ .sheet-master-container .sheet-rollmod-no,
-input.sheet-rollmod:not(:checked) ~ .sheet-master-container .sheet-rollmod  {
+input.sheet-rollmod:checked ~ .sheet-master-container .sheet-rollmod,
+input.sheet-rollmod:not(:checked) ~ .sheet-master-container .sheet-rollmod-no  {
 	display: none;
 }
 

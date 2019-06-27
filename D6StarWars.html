@@ -116,8 +116,8 @@
 					<label>Initiative bonus
 						<input type="number" name="attr_initiative" class="smallnumber shortnumber" min="0" value="0"/>D+<input type="number" name="attr_initiativepip" class="pipnumber shortnumber" min="0" max="2" value="0"/>
 					</label>
-					<button class="d6-dice rollmod-no" type="roll" name="roll_init" value="&{template:black} {{name=Initiative}} {{Roll=[[(@{perception} + @{initiative} -@{WoundMod} + @{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{perceptionpip} + @{initiativepip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6 &{tracker}]]}}">Initiative</button>
-					<button class="d6-dice rollmod" type="roll" name="roll_initnomod" value="&{template:black} {{name=Initiative}} {{Roll=[[(@{perception} + @{initiative} -@{WoundMod} + @{Force_Up} -1)d6cf0cs7 + @{perceptionpip} + @{initiativepip} + 1d6!cf1cs6 &{tracker}]]}}">Initiative</button>
+					<button class="d6-dice rollmod" type="roll" name="roll_init" value="&{template:black} {{name=Initiative}} {{Roll=[[(@{perception} + @{initiative} -@{WoundMod} + @{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{perceptionpip} + @{initiativepip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6 &{tracker}]]}}">Initiative</button>
+					<button class="d6-dice rollmod-no" type="roll" name="roll_initnomod" value="&{template:black} {{name=Initiative}} {{Roll=[[(@{perception} + @{initiative} -@{WoundMod} + @{Force_Up} -1)d6cf0cs7 + @{perceptionpip} + @{initiativepip} + 1d6!cf1cs6 &{tracker}]]}}">Initiative</button>
 					<button class="d6-dice" type="roll" name="roll_customroll" value="&{template:black} {{name=?{Roll Name}}} {{Roll=[[{(?{Number of dice|0} - 1)d6cf0cs7 + ?{Number of pip|0},1d6!cf1cs6}]]}}">Custom Roll(no modifiers)</button>
 					<button class="d6-dice" type="roll" name="roll_extraroll" value="&{template:black} {{name=Extra Dice}} {{Roll=[[{?{Number of  extra dice|0}d6cf0cs7}]]}}">Extra Dice(no wild die)</button>
 					<button class="d6-dice" type="roll" name="roll_charproll" value="&{template:black} {{name=Character points roll}} {{Roll=[[?{Number of char points to spend on roll|1|2|3|4|5}d6!cf0cs6]]}}">Character points roll</button>
@@ -321,13 +321,16 @@
 					<input class="smallnumber shortnumber" type="number" name="attr_ROF"/>
 					<input class="mediumnumber shortnumber" type="number" name="attr_Ammo"/>
 				<!-- roll buttons with roll queries -->
-					<button class="d6-dice rollmod" name="roll_attack" type="roll" value="&{template:red} {{name=@{weapon}}} {{Roll=[[(@{weaponskill} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs0 + @{weaponskillpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}">Atk</button>				
-					<button class="d6-dice rollmod" name="roll_dmg" type="roll" value="&{template:red} {{name=@{weapon} damage}} {{Roll=[[(@{damagedice}- 1)d6cf0cs7 + @{damagepip} + (1d6!cf1cs6)]]}}">Dmg</button>
-					<button class="d6-dice rollmod gmroll gmroll-hide" name="rollg_attack" type="roll" value="/w gm &{template:red} {{name=@{weapon}}} {{Roll=[[(@{weaponskill} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs0 + @{weaponskillpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span>Atk</button>				
-					<button class="d6-dice rollmod gmroll gmroll-hide" name="rollg_dmg" type="roll" value="/w gm &{template:red} {{name=@{weapon} damage}} {{Roll=[[(@{damagedice}- 1)d6cf0cs7 + @{damagepip} + (1d6!cf1cs6)]]}}"><span class="redtxt">GM</span>Dmg</button>
-				<!-- same roll buttons without roll queries -->
-					<button class="d6-dice rollmod-no" name="roll_attack" type="roll" value="&{template:red} {{name=@{weapon}}} {{Roll=[[(@{weaponskill} -@{WoundMod} +@{Force_Up} -1)d6cf0cs0 + @{weaponskillpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}">Atk</button>				
-					<button class="d6-dice rollmod-no gmroll gmroll-hide" name="rollg_attack" type="roll" value="/w gm &{template:red} {{name=@{weapon}}} {{Roll=[[(@{weaponskill} -@{WoundMod} +@{Force_Up} -1)d6cf0cs0 + @{weaponskillpip} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span>Atk</button>				
+					<button class="d6-dice rollmod" name="roll_attack" type="roll" value="&{template:red} {{name=@{weapon}}} {{Roll=[[(@{weaponskill} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs0 + @{weaponskillpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}">Atk</button>
+					<button class="d6-dice rollmod-no" name="roll_attack" type="roll" value="&{template:red} {{name=@{weapon}}} {{Roll=[[(@{weaponskill} -@{WoundMod} +@{Force_Up} -1)d6cf0cs0 + @{weaponskillpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}">Atk</button>
+
+		
+					<button class="d6-dice rollmod gmroll gmroll-hide" name="rollg_attack" type="roll" value="/w gm &{template:red} {{name=@{weapon}}} {{Roll=[[(@{weaponskill} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs0 + @{weaponskillpip} + ?{Other Mods(pip)|0} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span>Atk</button>
+					<button class="d6-dice rollmod-no gmroll gmroll-hide" name="rollg_attack" type="roll" value="/w gm &{template:red} {{name=@{weapon}}} {{Roll=[[(@{weaponskill} -@{WoundMod} +@{Force_Up} -1)d6cf0cs0 + @{weaponskillpip} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span>Atk</button>
+
+					<button class="d6-dice" name="roll_dmg" type="roll" value="&{template:red} {{name=@{weapon} damage}} {{Roll=[[(@{damagedice}- 1)d6cf0cs7 + @{damagepip} + (1d6!cf1cs6)]]}}">Dmg</button>
+					<button class="d6-dice gmroll gmroll-hide" name="rollg_dmg" type="roll" value="/w gm &{template:red} {{name=@{weapon} damage}} {{Roll=[[(@{damagedice}- 1)d6cf0cs7 + @{damagepip} + (1d6!cf1cs6)]]}}"><span class="redtxt">GM</span>Dmg</button>								
+									
 				</fieldset>
 			<table>
 				<tr>
@@ -345,10 +348,11 @@
 					<input class="skilltext" type="text" name="attr_armor_other"/>
 					<button class="d6-dice rollmod physical" name="roll_dmg_soak_en" type="roll" value="&{template:red} {{name=Damage Soak(Physical)}} {{Roll=[[(@{strength} +@{armorPhDice} -1)d6cf0cs0 +@{armorPhPip} +1d6!cf1cs6]]}}">t</button>
 					<button class="d6-dice rollmod energy" name="roll_dmg_soak_ph" type="roll" value="&{template:red} {{name=Damage Soak(Energy)}} {{Roll=[[(@{strength} +@{armorEnDice} -1)d6cf0cs0 +@{armorEnPip} +1d6!cf1cs6]]}}">e</button>
-					<button class="d6-dice rollmod" name="roll_dmg_soak_str" type="roll" value="&{template:red} {{name=Damage Soak(Strength only)}} {{Roll=[[(@{strength} -1)d6cf0cs7 +1d6!cf1cs6]]}}">Str only</button>	  
-					<button class="d6-dice rollmod gmroll physical gmroll-hide" name="rollg_dmg_soak_en" type="roll" value="/w gm &{template:red} {{name=Damage Soak(Physical)}} {{Roll=[[(@{strength} +@{armorPhDice} -1)d6cf0cs0 + @{armorPhPip} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span>t</button>
-					<button class="d6-dice rollmod gmroll energy gmroll-hide" name="rollg_dmg_soak_ph" type="roll" value="/w gm &{template:red} {{name=Damage Soak(Energy)}} {{Roll=[[(@{strength} +@{armorEnDice} -1)d6cf0cs0 + @{armorEnPip} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span>e</button>
-					<button class="d6-dice rollmod gmroll gmroll-hide" name="rollg_dmg_soak_str" type="roll" value="/w gm &{template:red} {{name=Damage Soak(Strength only)}} {{Roll=[[(@{strength} -1)d6cf0cs0 + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span>S</button>	  
+					<button class="d6-dice rollmod" name="roll_dmg_soak_str" type="roll" value="&{template:red} {{name=Damage Soak(Strength only)}} {{Roll=[[(@{strength} -1)d6cf0cs7 +1d6!cf1cs6]]}}">Str only</button>
+
+					<button class="d6-dice rollmod-no gmroll physical gmroll-hide" name="rollg_dmg_soak_en" type="roll" value="/w gm &{template:red} {{name=Damage Soak(Physical)}} {{Roll=[[(@{strength} +@{armorPhDice} -1)d6cf0cs0 + @{armorPhPip} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span>t</button>
+					<button class="d6-dice rollmod-no gmroll energy gmroll-hide" name="rollg_dmg_soak_ph" type="roll" value="/w gm &{template:red} {{name=Damage Soak(Energy)}} {{Roll=[[(@{strength} +@{armorEnDice} -1)d6cf0cs0 + @{armorEnPip} + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span>e</button>
+					<button class="d6-dice rollmod-no gmroll gmroll-hide" name="rollg_dmg_soak_str" type="roll" value="/w gm &{template:red} {{name=Damage Soak(Strength only)}} {{Roll=[[(@{strength} -1)d6cf0cs0 + 1d6!cf1cs6]]}}"><span class="redtxt">GM</span>S</button>	  
 				</fieldset>
 		</div>
 		<div class="section force-hide"> <!--------------------------- Force -->
