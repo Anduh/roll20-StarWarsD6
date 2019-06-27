@@ -2,7 +2,6 @@
 /*------------- SWD6 Main CSS----------------*/
 /*-------------------------------------------*/
 .charsheet {
-    /*https://cdn.pixabay.com/photo/2017/01/02/11/10/sky-1946508_960_720.png more and brighter stars*/
 	background-image: url(https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_960_720.png); /*black space with tiny white stars*/
     background-color: black;
     background-repeat: repeat;
@@ -156,10 +155,20 @@
 }
 
 .charsheet .sheet-redtxt{
-    font-size: 6pt;
+	font-size: 8px;
     color: red;
+    font-family: 'Arial';
 }
-/*Original button :button[type=roll].sheet-blank-roll-button::before { content: ''; } */
+
+
+/* writing the letter 't' with this font shows an impact icon signifying physical damage */
+.charsheet button.sheet-physical{
+    font-family: 'Pictos Custom';
+}
+/* writing the letter 'e' with this font shows e bolt icon signifying energy damage */
+.charsheet button.sheet-energy{
+    font-family: 'Pictos';
+}
 
 /*-------------------------------------------*/
 /*-----Main Settings and hide classes--------*/
@@ -203,15 +212,15 @@ input.sheet-options-flag:checked ~ div.sheet-main-container {
 }
 
 /* all hide options using option menu checkboxes*/
-/*input.sheet-wild:checked ~ .sheet-master-container .sheet-wild-hide,
-input.sheet-nowild:checked ~ .sheet-master-container .sheet-nowild-hide, */
 
 input.sheet-background:checked  ~ .sheet-master-container .sheet-background-hide,
 input.sheet-force:checked ~ .sheet-master-container .sheet-force-hide,
 input.sheet-equipment:checked ~ .sheet-master-container .sheet-equipment-hide,
 input.sheet-npc:checked  ~ .sheet-master-container .sheet-npc-hide ,
 input.sheet-npc:not(:checked) ~ .sheet-master-container .sheet-pc-hide,
-input.sheet-gmroll:checked ~ .sheet-master-container .sheet-gmroll-hide {
+input.sheet-gmroll:checked ~ .sheet-master-container .sheet-gmroll-hide,
+input.sheet-rollmod:checked ~ .sheet-master-container .sheet-rollmod-no,
+input.sheet-rollmod:not(:checked) ~ .sheet-master-container .sheet-rollmod  {
 	display: none;
 }
 
@@ -225,7 +234,6 @@ input[type=number]::-webkit-inner-spin-button {}
 	position: relative;
 	padding: 0;
 	display: inline-block;
-	/*width: 900px;*/
 	background-image: url(https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_960_720.png); /*black space with tiny stars*/
     background-color: black;
     background-repeat: repeat;

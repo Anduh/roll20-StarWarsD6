@@ -1,3 +1,10 @@
+### Version 1.90 (2019-07-02):
+
+- fixed on/off toggle for gmroll, isn't entangled with other options any longer
+- Attribute section layout fix, shifted it to display 2 attributes/row from previous 3/row
+- change energy/physical armor soak rolls to display icon instead of text to reduce clutter in button name
+- added option to disable roll queries from sheet rolls
+
 ### Version 1.83 (2019-05-28):
 
 - Removed wound penalties from affecting soak rolls (reported by **Wolf**)
