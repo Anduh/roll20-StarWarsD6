@@ -1,9 +1,17 @@
-### Version 1.90 (2019-07-02):
+### Version 2.00 (2019-07-09):
+**Fixes:**
 
-- fixed on/off toggle for gmroll, isn't entangled with other options any longer
-- Attribute section layout fix, shifted it to display 2 attributes/row from previous 3/row
-- change energy/physical armor soak rolls to display icon instead of text to reduce clutter in button name
-- added option to disable roll queries from sheet rolls
+- fixed on/off toggle for gmroll, isn't any longer entangled with other options
+- Attribute section layout fix, shifted it to display 2 attributes per row from previous 3 per row
+
+**Layout:**
+
+- change Energy/Physical armor soak rolls to display icon instead of text to reduce clutter in button name; Energy Bolt for Energy and Star for Physical 
+
+**Features:**
+
+- New option: Now possible to disable the Wild Die from rolls, making the sheet easier to for playing 1E
+- New option: Now possible to disable roll queries from sheet rolls, so button presses rolls dice instantly without asking for roll modifiers
 
 ### Version 1.83 (2019-05-28):
 

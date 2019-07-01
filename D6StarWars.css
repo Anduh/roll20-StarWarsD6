@@ -9,7 +9,7 @@
 }
 
 .charsheet .sheet-version::after {
-    content: 'Sheet Version 1.95 WD test';
+    content: 'Sheet Version 2.00';
 }
 
 .charsheet label, h1, h2, h3{
