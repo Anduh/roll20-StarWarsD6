@@ -1,10 +1,13 @@
-<input class="selector-switch npc" name="attr_npcswitch" type="checkbox" value="1">
+<input class="toggle" name="attr_sheettype" type="hidden" value="0">
+
 <input class="selector-switch gmroll" name="attr_gmrollswitch" type="checkbox" value="1">
 <input class="selector-switch rollmod" name="attr_rollmodswitch" type="checkbox" value="1">
+
 <input class="selector-switch force" name="attr_forceswitch" type="checkbox" value="1">
 <input class="selector-switch background" name="attr_backgroundswitch" type="checkbox" value="1">
 <input class="selector-switch equipment" name="attr_equipmentswitch" type="checkbox" value="1">
-<input class="toggle" name="attr_sheettype" type="hidden" value="0">
+<input class="selector-switch cptracker" name="attr_cpswitch" type="checkbox" value="1" checked="checked">
+<input class="selector-switch credittracker" name="attr_creditswitch" type="checkbox" value="1" checked="checked">
 
 
 <div class="master-container">
@@ -15,7 +18,7 @@
 
 <!-- Shows which sheet type is selected -->
 
-	<div class="main-settings" style="height:1em;text-align:right;float:right"><h2>Settings</h2></div>
+	<div class="main-settings" style="height:1em;text-align:right;float:right;"><h2>Settings</h2></div>
 	<div class="main-container pc right" style="position:absolute;right: 5px;top:-35px"><h2>Player Sheet</h2></div>
 	<div class="main-container npc right" style="position:absolute;right: 5px;top:-35px"><h2>NPC Sheet</h2></div>
 	<div class="main-container ship right" style="position:absolute;right: 5px;top:-35px"><h2>Ship</h2></div>
@@ -39,8 +42,8 @@
 
 		<!-- Sheet type -->
 			<div class="input-row top-row bold">
-				<span title="Shows a more dense statblock for NPCs. Equipment sections uses the first field from the PC version">Sheet type</span>
-				<select name="attr_sheettype" style="width:60px;">
+				<span title="Shows a more dense statblock for NPCs. Equipment sections uses the first field from the PC version">Sheet type: </span>
+				<select name="attr_sheettype" style="width:90px;">
 					<option value="0" selected="selected">PC</option>
 					<option value="1">NPC</option>
 					<option value="2">Ship</option>
@@ -71,6 +74,9 @@
 
 		<!-- Few optional sections to hide -->
 			<div class="input-row top-row bold">
+				<span title="Useful for those who are not Force-sensitive">Hide/Show Sections:</span>
+			</div>
+			<div class="input-row top-row bold">
 				<span title="Useful for those who are not Force-sensitive">Hide Force Section? <input name="attr_forceswitch" type="checkbox" value="1"></span>
 			</div>
 			<div class="input-row top-row bold">
@@ -80,6 +86,14 @@
 			<div class="input-row top-row bold">
 				<span>Hide Background Section? </span>
 				<input name="attr_backgroundswitch" type="checkbox" value="1">
+			</div>
+			<div class="input-row top-row bold">
+				<span>Hide Charcter Point Summary Section? </span>
+				<input name="attr_cpswitch" type="checkbox" value="1" checked="checked">
+			</div>
+			<div class="input-row top-row bold">
+				<span>Hide Credit Summary Section? </span>
+				<input name="attr_creditswitch" type="checkbox" value="1" checked="checked">
 			</div>
 		</div>
 	</div>
@@ -639,6 +653,30 @@
 			</table>
 		</div>
 
+	<!-- --------------------------------------------------Chracacter Point tracking------------------------------------ -->
+
+	<div class="section cptracker-hide pc">
+		<label> Character Point Tracker</label>
+		<fieldset class="repeating_cptable">
+			<div>
+				<input type="text" name="attr_cp_desc" style="width:80%;">
+				<input type="number" name="attr_cp_amount">
+			</div>
+		</fieldset>
+	</div>
+
+	<!-- ---------------------------------------------------------- Credit tracking------------------------------------ -->
+
+	<div class="section credittracker-hide pc">
+		<label>Credit Tracker</label>
+		<fieldset class="repeating_credittable">
+			<div>
+				<input type="text" name="attr_credit_desc" style="width:80%;">
+				<input type="number" name="attr_cedit_amount" style="width:100px;">
+			</div>			
+		</fieldset>
+	</div>
+
 	<!-- ---------------------------------------------------------- Ship Core info------------------------------------ -->
 
 		<div class="section ship shipinfo">
@@ -711,7 +749,10 @@
 				</div>
 			</div>
 		</div>
-	<div class="section" style="text-align: Center; padding-top:10px;"> <!-- footer-->
+
+<!-- ----------- footer -------------------- -->
+
+	<div class="section" style="text-align: Center; padding-top:10px;"> 
 			<p class="version" style="text-align: center;"><small>Original Author: Timothy O'Driscoll | Main Editor: Andreas J. (Roll20user: 1223200) | </small></p>
 	</div>
 	</div>
