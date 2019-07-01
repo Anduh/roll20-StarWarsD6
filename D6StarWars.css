@@ -9,7 +9,7 @@
 }
 
 .charsheet .sheet-version::after {
-    content: 'Sheet Version 2.00';
+    content: 'Sheet Version 2.10';
 }
 
 .charsheet label, h1, h2, h3{
@@ -213,11 +213,21 @@ input.sheet-options-flag:checked ~ div.sheet-main-container {
 
 /* all hide options using option menu checkboxes*/
 
+.sheet-master-container .sheet-pc,
+.sheet-master-container .sheet-npc,
+.sheet-master-container .sheet-ship {
+    display: none;
+}
+
+input.sheet-toggle[value="0"] ~ .sheet-master-container .sheet-pc,
+input.sheet-toggle[value="1"] ~ .sheet-master-container .sheet-npc,
+input.sheet-toggle[value="2"] ~ .sheet-master-container .sheet-ship {
+    display: block;
+}
+
 input.sheet-background:checked  ~ .sheet-master-container .sheet-background-hide,
 input.sheet-force:checked ~ .sheet-master-container .sheet-force-hide,
 input.sheet-equipment:checked ~ .sheet-master-container .sheet-equipment-hide,
-input.sheet-npc:checked  ~ .sheet-master-container .sheet-npc-hide ,
-input.sheet-npc:not(:checked) ~ .sheet-master-container .sheet-pc-hide,
 input.sheet-gmroll:checked ~ .sheet-master-container .sheet-gmroll-hide,
 input.sheet-rollmod:checked ~ .sheet-master-container .sheet-rollmod,
 input.sheet-rollmod:not(:checked) ~ .sheet-master-container .sheet-rollmod-no  {

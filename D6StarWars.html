@@ -4,6 +4,7 @@
 <input class="selector-switch force" name="attr_forceswitch" type="checkbox" value="1">
 <input class="selector-switch background" name="attr_backgroundswitch" type="checkbox" value="1">
 <input class="selector-switch equipment" name="attr_equipmentswitch" type="checkbox" value="1">
+<input class="toggle" name="attr_sheettype" type="hidden" value="0">
 <!--
 <input class="selector-switch wild" name="attr_wildswitch" type="radio" value="wild" checked="true">
 <input class="selector-switch nowild" name="attr_wildswitch" type="radio" value="nowild"> -->
@@ -11,8 +12,9 @@
 <div class="master-container">
 	<input class="main-options options-flag" type="checkbox" name="attr_options-flag"><span style="float:left">y</span>
 	<div class="main-settings" style="height:1em;text-align:right;float:right"><h2>Settings</h2></div>
-	<div class="main-container npc-hide right" style="position:absolute;right: 5px;top:-35px"><h2>Player Sheet</h2></div>
-	<div class="main-container pc-hide right" style="position:absolute;right: 5px;top:-35px"><h2>NPC Sheet</h2></div>
+	<div class="main-container pc right" style="position:absolute;right: 5px;top:-35px"><h2>Player Sheet</h2></div>
+	<div class="main-container npc right" style="position:absolute;right: 5px;top:-35px"><h2>NPC Sheet</h2></div>
+	<div class="main-container ship right" style="position:absolute;right: 5px;top:-35px"><h2>Ship</h2></div>
 	<div style="position:absolute;right: 5px;top:30px"><p class="version"> </p></div>
 	<div style="display:inline-block;position:absolute;left: 150px;padding-bottom:50px"> <!-- header-->
 		<img src="http://rs8.pbsrc.com/albums/a35/VPP3/d62_zpstllyo5ds.png?w=480&h=480&fit=clip" style="max-height: 50px;"/>
@@ -29,8 +31,12 @@
 				<p>⚫ Equipment Section moved above Background Section</p>
 			</div> -->
 			<div class="input-row top-row bold">
-				<span title="Shows a more dense statblock for NPCs. Equipment sections uses the first field from the PC version">Use NPC sheet <input name="attr_npcswitch" type="checkbox" value="1"></span>
-
+				<span title="Shows a more dense statblock for NPCs. Equipment sections uses the first field from the PC version">Sheet type</span>
+				<select name="attr_sheettype" style="width:60px;">
+					<option value="0" selected="selected">PC</option>
+					<option value="1">NPC</option>
+					<option value="2">Ship</option>
+				</select>
 			</div>
 			<div class="input-row top-row bold">
 				<span title="Hides the GM rolls. They are like regular rolls but whispered to the GM">Hide GM Rolls?</span>
@@ -61,7 +67,7 @@
 		</div>
 	</div>
 <div class="main-container container" style="padding-top:75px">
-		<div class="section npc-hide"> <!-- PC core info-->
+		<div class="section pc"> <!-- PC core info-->
 			<div class="2colrow">
 				<div class="col" style="display:inline-block;">
 					<label class="toppad">Character Name <input class="right shorttext" type="text" name="attr_charactername" style="width:55%"/></label>
@@ -88,7 +94,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section npc-hide"> <!-- PC numbers -->
+		<div class="section pc"> <!-- PC numbers -->
 			<div class='3colrow'>
 				<div class='col'>
 					<label class="areaLabel">Special Abilities</label>
@@ -131,7 +137,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section pc-hide"> <!----------- NPC info block-->
+		<div class="section npc"> <!----------- NPC info block-->
 			<div class="2colrow">
 				<div class="col" style="display:inline-block;">
 					<label class="toppad">NPC Name <input class="right shorttext" type="text" name="attr_charactername" style="width:65%"></label>
@@ -158,7 +164,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section"> <!----------------------------------- Attributes&Skills -->
+		<div class="section pc npc"> <!----------------------------------- Attributes&Skills -->
 			<div class="flex-box">
 				<div class="flex-col">
 							<div class="tdborder"> <!---Dex Attribute --->
@@ -370,7 +376,7 @@
 					<button class="d6-dice rollmod-no gmroll gmroll-hide" name="rollg_dmg_soak_str" type="roll" value="/w gm &{template:red} {{name=Damage Soak(Strength only)}} {{Roll=[[(@{strength} +?{Dice mods|0} -1)d6cf0cs0 +?{Other Mods(pip)|0} + 1d6@{wilddie}]]}}"><span class="redtxt">GM</span>S</button>		  
 				</fieldset>
 		</div>
-		<div class="section force-hide"> <!--------------------------- Force -->
+		<div class="section force-hide pc npc"> <!--------------------------- Force -->
 			<label style="text-align: center">Force Section</label>
 			<div class='3colrow'>
 				<div class='col'>
@@ -493,7 +499,7 @@
 					</span>		
 			</div>
 		</div>
-		<div class="section equipment-hide npc-hide"> <!-- Equipment PC-->
+		<div class="section equipment-hide pc"> <!-- Equipment PC-->
 				<label style="text-align: center;">Equipment</label>
 				<table style="width:97%">
 					<tr>
@@ -512,11 +518,11 @@
 					</tr>
 				</table>
 		</div>
-		<div class="section equipment-hide pc-hide" ><!-- Equipment NPC-->
+		<div class="section equipment-hide npc" ><!-- Equipment NPC-->
 				<label style="text-align: center">Equipment</label>
 				<textarea style="height:7em;width:96%" name="attr_geartext1"></textarea>
 		</div>
-		<div class="section background-hide"> <!---------Background & extended info -->
+		<div class="section background-hide pc npc"> <!---------Background & extended info -->
 			<label style="text-align: center">Background and extended info</label>
 			<table>
 				<tr>
@@ -560,7 +566,7 @@
 				</tr>
 			</table>
 		</div>
-		<div class="section"> <!-- -------------------------------Ship&Vehicle section-->
+		<div class="section ship"> <!-- -------------------------------Ship&Vehicle section-->
 			<div class='2colrow'>
 				<div class='col'><!-- Vehicle -->
 						<label style="padding-top:4px;padding-bottom:4px;" >Vehicle</label>
