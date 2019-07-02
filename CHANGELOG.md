@@ -1,3 +1,11 @@
+### Version 2.10 (still testing):
+**Features:**
+
+- New sheet section: Character Point summary; meant for tracking how points are used. Includes option to hide section
+- New sheet section: Credit Spenditure summary; meant for tracking how credits are spent. Includes option to hide section
+
+- New sheet modes: **Ship** and **Shop/Container** as new options alongside existing **PC** and **NPC** sheet modes
+
 ### Version 2.00 (2019-07-09):
 **Fixes:**
 

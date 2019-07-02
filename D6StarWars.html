@@ -656,7 +656,8 @@
 	<!-- --------------------------------------------------Chracacter Point tracking------------------------------------ -->
 
 	<div class="section cptracker-hide pc">
-		<label> Character Point Tracker</label>
+		<label>Character Point Tracker</label>
+		<label>Total CP spent<input type="number" name="attr_cp_spent" disabled="true"></label>
 		<fieldset class="repeating_cptable">
 			<div>
 				<input type="text" name="attr_cp_desc" style="width:80%;">
@@ -669,10 +670,11 @@
 
 	<div class="section credittracker-hide pc">
 		<label>Credit Tracker</label>
+		<label>Total Credit spent<input type="number" name="attr_credit_spent" disabled="true"></label>
 		<fieldset class="repeating_credittable">
 			<div>
 				<input type="text" name="attr_credit_desc" style="width:80%;">
-				<input type="number" name="attr_cedit_amount" style="width:100px;">
+				<input type="number" name="attr_credit_amount" style="width:100px;">
 			</div>			
 		</fieldset>
 	</div>
@@ -806,6 +808,29 @@
 <!-- ----------------------------------------------------- Sheet workers -------------------------------------- -->
 
 <script type="text/worker">
+/* ===== PARAMETERS ==========
+destination = the name of the attribute that stores the total quantity
+section = name of repeating fieldset, without the repeating_
+fields = the name of the attribute field to be summed
+      can be a single attribute: 'weight'
+      or an array of attributes: ['weight','number','equipped']
+multiplier (optional) = a multiplier to to entire fieldset total. For instance, if summing coins of weight 0.02, might want to multiply the final total by 0.02.
+*/
+const repeatingSum = (destination, section, fields, multiplier = 1) => {
+    if (!Array.isArray(fields)) fields = [fields];
+    getSectionIDs(`repeating_${section}`, idArray => {
+        const attrArray = idArray.reduce( (m,id) => [...m, ...(fields.map(field => `repeating_${section}_${id}_${field}`))],[]);
+        getAttrs(attrArray, v => {
+            console.log("===== values of v: "+ JSON.stringify(v) +" =====");
+                 // getValue: if not a number, returns 1 if it is 'on' (checkbox), otherwise returns 0..
+            const getValue = (section, id,field) => parseFloat(v[`repeating_${section}_${id}_${field}`], 10) || (v[`repeating_${section}_${id}_${field}`] === 'on' ? 1 : 0); 
+            const sumTotal = idArray.reduce((total, id) => total + fields.reduce((subtotal,field) => subtotal * getValue(section, id,field),1),0);
+            setAttrs({[destination]: sumTotal * multiplier});    
+        });
+    });
+};
+
+
 on("change:painresist change:woundlevel", function() {
    getAttrs(["WoundLevel", "PainResist","WoundMod"], function(values) {
 	if(values.WoundLevel == "0"){
@@ -858,5 +883,13 @@ on("change:force_emptiness change:darksidepoints", function() {
 			Force_EmptinessMod:v_Force_EmptinessMod
 		});
    });
+});
+
+on("change:repeating_credittable remove:repeating_credittable", function() {
+	repeatingSum("credit_spent","credittable","credit_amount");
+});
+
+on("change:repeating_cptable change:repeating_cptable", function() {
+	repeatingSum("cp_spent", "cptable","cp_amount");
 });
 </script>
