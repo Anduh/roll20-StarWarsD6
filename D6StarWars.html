@@ -88,7 +88,7 @@
 				<input name="attr_backgroundswitch" type="checkbox" value="1">
 			</div>
 			<div class="input-row top-row bold">
-				<span>Hide Charcter Point Summary Section? </span>
+				<span>Hide Character Point Summary Section? </span>
 				<input name="attr_cpswitch" type="checkbox" value="1" checked="checked">
 			</div>
 			<div class="input-row top-row bold">
@@ -653,16 +653,17 @@
 			</table>
 		</div>
 
-	<!-- --------------------------------------------------Chracacter Point tracking------------------------------------ -->
+	<!-- --------------------------------------------------Character Point tracking------------------------------------ -->
 
 	<div class="section cptracker-hide pc">
 		<label>Character Point Tracker</label>
-		<label>Total CP spent<input type="number" name="attr_cp_spent" disabled="true"></label>
+		<span class="bold">Total CP spent:</span>
+		<span class="num" name="attr_cp_spent"></span>
 		<fieldset class="repeating_cptable">
-			<div>
-				<input type="text" name="attr_cp_desc" style="width:80%;">
-				<input type="number" name="attr_cp_amount">
-			</div>
+				<div style="padding-top: 8px;">
+					<input type="text" name="attr_cp_desc" style="width:80%;">
+					<input type="number" name="attr_cp_amount">
+				</div>
 		</fieldset>
 	</div>
 
@@ -670,12 +671,13 @@
 
 	<div class="section credittracker-hide pc">
 		<label>Credit Tracker</label>
-		<label>Total Credit spent<input type="number" name="attr_credit_spent" disabled="true"></label>
+		<span class="bold">Total Credit spent:</span>
+		<span class="num credits" name="attr_credit_spent"></span>
 		<fieldset class="repeating_credittable">
-			<div>
+			<div style="padding-top: 8px;">
 				<input type="text" name="attr_credit_desc" style="width:80%;">
 				<input type="number" name="attr_credit_amount" style="width:100px;">
-			</div>			
+			</div>
 		</fieldset>
 	</div>
 
