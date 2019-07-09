@@ -1,4 +1,8 @@
-### Version 2.10 (still testing):
+### Version 2.11 (still testing):
+**Fix:**
+
+- Added back strength pip to Soak rolls in the armor section
+
 **Features:**
 
 - New sheet section: Character Point summary; meant for tracking how points are used. Includes option to hide section

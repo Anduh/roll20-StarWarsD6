@@ -9,7 +9,7 @@
 }
 
 .charsheet .sheet-version::after {
-    content: 'Ship 1.2';
+    content: '2.11';
 }
 
 .charsheet label, h1, h2, h3{
