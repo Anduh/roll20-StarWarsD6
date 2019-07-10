@@ -1,4 +1,4 @@
-### Version 2.11 (still testing):
+### Version 2.12 (still testing):
 **Fix:**
 
 - Added back strength pip to Soak rolls in the armor section
