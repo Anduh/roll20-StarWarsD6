@@ -1,7 +1,8 @@
-### Version 2.12 (still testing):
+### Version 2.13 (still testing):
 **Fix:**
 
 - Added back strength pip to Soak rolls in the armor section
+- remove duplicate DM roll button from Tech skills
 
 **Features:**
 

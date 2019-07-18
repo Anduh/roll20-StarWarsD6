@@ -371,7 +371,7 @@
 											<button class="d6-dice rollmod gmroll gmroll-hide"  type="roll" value="/w gm &{template:blue} {{name=@{techskillname}}} {{Roll=[[(@{techskilldice} -@{WoundMod} +@{Force_Up} + ?{Dice mods|0} -1)d6cf0cs7 + @{techskillpip} + ?{Other Mods(pip)|0} + 1d6@{wilddie}]]}}"><span class="redtxt">GM</span></button>
 
 											<button class="d6-dice rollmod-no"  type="roll" value="&{template:blue} {{name=@{techskillname}}} {{Roll=[[(@{techskilldice} -@{WoundMod} +@{Force_Up} -1)d6cf0cs7 + @{techskillpip} + 1d6@{wilddie}]]}}"></button>
-											<button class="d6-dice rollmod gmroll gmroll-hide"  type="roll" value="/w gm &{template:blue} {{name=@{techskillname}}} {{Roll=[[(@{techskilldice} -@{WoundMod} +@{Force_Up} -1)d6cf0cs7 + @{techskillpip} + 1d6@{wilddie}]]}}"><span class="redtxt">GM</span></button>
+											<button class="d6-dice rollmod-no gmroll gmroll-hide"  type="roll" value="/w gm &{template:blue} {{name=@{techskillname}}} {{Roll=[[(@{techskilldice} -@{WoundMod} +@{Force_Up} -1)d6cf0cs7 + @{techskillpip} + 1d6@{wilddie}]]}}"><span class="redtxt">GM</span></button>
 											  <input class="skilltext" type="text" name="attr_techskillname"/>
 											  <div class="right">
 												<input type="number" name="attr_techskilldice" class="smallnumber shortnumber" min="1" value="3"/>D+<input type="number" name="attr_techskillpip" class="pipnumber shortnumber" min="0" max="2" value="0"/>
@@ -657,7 +657,7 @@
 
 	<div class="section cptracker-hide pc">
 		<label>Character Point Tracker</label>
-		<span class="bold">Total CP spent:</span>
+		<span class="bold">Character Point Balance:</span>
 		<span class="num" name="attr_cp_spent"></span>
 		<fieldset class="repeating_cptable">
 				<div style="padding-top: 8px;">
@@ -671,7 +671,7 @@
 
 	<div class="section credittracker-hide pc">
 		<label>Credit Tracker</label>
-		<span class="bold">Total Credit spent:</span>
+		<span class="bold">Credit Balance:</span>
 		<span class="num credits" name="attr_credit_spent"></span>
 		<fieldset class="repeating_credittable">
 			<div style="padding-top: 8px;">
@@ -684,17 +684,17 @@
 	<!-- ---------------------------------------------------------- Ship Core info------------------------------------ -->
 
 		<div class="section ship shipinfo">
-			<span class="bold">Starship:<input type="text" name="attr_ship_name"></span>
+			<span class="bold">Starship:<input type="text" name="attr_ship_name" style="width:350px"></span>
 			<br>
 			<span class="bold">Craft:<input type="text" name="attr_ship_craft"></span>
-			<br>
 			<span class="bold">Type:<input type="text" name="attr_ship_type"></span>
 			<br>
-			<span class="bold">Scale:<input type="number" name="attr_ship_scale" class="mediumnumber"></span>
-			<span class="bold">Length:<input type="number" name="attr_ship_length" class="mediumnumber"></span>
-			<span class="bold">Crew:<input type="number" name="attr_ship_crew" class="mediumnumber"></span>
+			<span class="bold">Scale:<input type="text" name="attr_ship_scale" ></span>
+			<span class="bold">Length:<input type="text" name="attr_ship_length" ></span>
 			<br>
+			<span class="bold">Crew:<input type="number" name="attr_ship_crew" class="mediumnumber"></span>
 			<span class="bold">Skill:<input type="text" name="attr_ship_skill"></span>
+			<br>
 			<span class="bold">Passangers:<input type="number" name="attr_ship_passangers" class="mediumnumber"></span>
 			<span class="bold">Cargo Capacity:<input type="text" name="attr_ship_cargo_capacity"></span>
 			<span class="bold">Consumables:<input type="text" name="attr_ship_consumables"></span>
@@ -704,6 +704,7 @@
 			<span class="bold">Nav Computer:<input type="text" name="attr_nav_computer"></span>
 			<br>
 			<span class="bold">Maneuverability:<input type="text" name="attr_maneuverability"></span>
+			<br>
 			<span class="bold">Space:<input type="text" name="attr_ship_space"></span>
 			<span class="bold">Athmosphere:<input type="text" name="attr_ship_athmosphere"></span>
 			<br>
@@ -727,14 +728,17 @@
 			<label>Ship Weapons</label>
 			<fieldset class="repeating_ship_weapon">
 				<label class="bold">Weapon Name<input type="text" name="attr_weapon_name"></label>
-				<span>Scale<input type="number" name="attr_weapon_scale" value="" class="smallnumber"></span>
-				<span>Fire Arc<input type="number" name="attr_weapon_arc" value="" class="smallnumber"></span>
-				<span>Crew<input type="number" name="attr_weapon_crew" value="" class="mediumnumber"></span>
-				<span>Skill<input type="number" name="attr_weapon_skill" value=""></span>
-				<span>Fire Control<input type="number" name="attr_weapon_fire_control" value="" class="smallnumber"></span>
-				<span>Space Range<input type="number" name="attr_weapon_range_space" value="" class="mediumnumber"></span>
-				<span>Atmosphere Range<input type="number" name="attr_weapon_range_atmosphere" value="" class="smallnumber"></span>
-				<span>Damage<input type="number" name="attr_weapon_damage" value="" class="smallnumber"></span>				
+				<span>Scale:<input type="text" name="attr_weapon_scale" value="" class="smallnumber"></span>
+				<span>Fire Arc:<input type="text" name="attr_weapon_arc" value="" ></span>
+				<span>Crew:<input type="text" name="attr_weapon_crew" value="" ></span>
+				<br>
+				<span>Skill:<input type="text" name="attr_weapon_skill" value=""></span>
+				<span>Fire Control:<input type="number" name="attr_weapon_fire_control" value="" class="smallnumber"> D</span>
+				<br>
+				<span>Space Range:<input type="number" name="attr_weapon_range_space" value="" class="mediumnumber"></span>
+				<span>Atmosphere Range:<input type="number" name="attr_weapon_range_atmosphere" value="" class="smallnumber"></span>
+				<br>
+				<span>Damage:<input type="number" name="attr_weapon_damage" value="3" class="smallnumber">D+<input type="number" name="attr_weapon_damage_pip" value="0" class="smallnumber"> <button type="roll" name="roll_ship_wpn_dmg" value="&{template:default} {{name=@{weapon_name} damage}} {{Roll=[[(@{weapon_damage}- 1)d6cf0cs0 + @{weapon_damage_pip} +(1d6@{wilddie})]]}}">DMG</button></span>				
 			</fieldset>
 		</div>
 
