@@ -1,0 +1,196 @@
+
+******From REUP******
+
+** Creature statblock, REUP **
+
+ACKLAY
+Type: Aquatic Predator
+DEXTERITY 1D+1
+PERCEPTION 2D+1
+Search 6D
+STRENGTH 7D
+Climbing/jumping 8D
+Special Abilities:
+Armor: The natural armor of the acklay grants it a +2D bonus to
+Strength when resisting physical damage.
+Bite: Does Strength+2 damage.
+Claws: Do Strength+1D damage.
+Exceptional Reflexes: Acklays gain a +1D bonus to all
+Perception rolls made to determine initiative.
+Resistant to Radiation: Acklays gain a +1D bonus to Strength when
+resisting the effects of harmful radiation.
+Move: 12
+Size: 6 meters long
+
+
+** Example character, somewhere in REUP **
+
+KARE FONTIN
+Type: Old Senatorial
+DEXTERITY 1D
+KNOWLEDGE 4D
+Alien species 9D, bureaucracy 12D, cultures 8D, languages 10D,
+willpower 10D
+MECHANICAL 3D
+Astrogation 4D+2
+PERCEPTION 4D
+Bargain 10D, command 10D, con 12D, hide 7D, persuasion 8D, search
+7D
+STRENGTH 1D
+TECHNICAL 1D
+Droid programming 3D, security 4D
+Force Points: 3
+Character Points: 16
+Move: 8
+Capsule: Kare Fontin is a very old former senator who served during
+the days of the Republic. He is well over 100 years old, and while
+his body has become quite frail over the years and he is a little
+hard of hearing, his mind and his wit are as keen as ever.
+
+
+** GM character section statblocks **
+
+Scout Trooper: All stats are 2D except: blaster 4D, brawling
+parry 4D, dodge 4D, Mechanical 3D, repulsorlift operation:
+speeder bike 3D+2, brawling 3D, Move: 10. Holdout blaster
+(3D+2), scout armor (+2 physical, +2 energy), blaster pistol (4D),
+blaster rifle (5D), concussion grenades (5D/4D/3D/2D), survival
+gear.
+
+Typical Imperial Naval Officer: Dexterity 2D+2,
+blaster 4D+2, blaster 4D+2, dodge 4D, Knowledge 3D,
+bureaucracy 4D, planetary systems 3D+1, tactics:
+capital ships 5D, tactics: fleets 4D, Mechanical 3D+2,
+capital ship piloting, 4D, Perception 3D+1, bargain
+5D+1, command 4D+1, hide 4D, Strength 2D+1,
+brawling 3D+2, stamina 3D+1, Technical 3D, capital
+ship repair 4D+1. Move 10. Blaster pistol (4D), com­
+link.
+
+
+** copypaste from player character template, REUP ** 
+
+EXTERITY
+Dodge
+Running
+3D
+PERCEPTION
+Command
+Investigation
+Persuasion
+3D+2
+Search
+KNOWLEDGE
+Bureaucracy
+Intimidation
+Law enforcement
+Planetary systems
+Scholar
+Tactics
+4D
+MECHANICAL
+2D+2
+Astrogation
+Repulsorlift operation
+Space transports
+SPECIAL ABILITIES
+None.
+STRENGTH
+Stamina
+Swimming
+2D+2
+TECHNICAL
+Computer prgm./repair
+Droid prgm.
+Droid repair
+First aid
+Security
+2D
+
+******** From RPGGamer.org ********
+
+CHARACTER NAME: Anakin Skywalker (as of The Clone Wars)
+SPECIES - Human
+GENDER - Male
+AGE : 20-25
+HEIGHT - 1.88 meters
+MOVE - 10
+
+DEXTERITY: 4D
+        Blaster: 4D+2
+        Dodge: 5D+2
+        Lightsaber: 6D+2
+        Vehicle Blasters: 4D+2
+
+PERCEPTION: 3D
+        Command: 5D
+        Bargain: 6D
+        Con: 4D
+        Hide: 5D+1
+        Investigation: 6D
+        Persuasion: 6D
+        Search: 6D
+        Sneak: 5D
+
+KNOWLEDGE: 2D
+        Languages: 3D+1
+        Scholar (Jedi Lore): 4D
+        Tactics: 5D
+        Cultures: 3D+1
+        Intimidation: 5D+2
+        Planetary Systems: 3D
+        Streetwise: 3D+2
+        Survival: 3D+2
+        Willpower: 6D
+
+STRENGTH: 4D
+        Brawling: 5D+1
+        Climbing/Jumping: 5D+2
+        Lifting: 4D+1
+        Stamina: 6D+1
+        Swimming: 4D+2
+
+MECHANICAL: 4D
+        Space Transports: 6D
+        Starfighter Piloting: 6D+2
+        Starship Gunnery: 6D
+        Repulsorlift Operation: 5D+2
+        Starship Shields: 5D
+        Sensors: 4D+2
+        Walker Operation: 4D+1
+
+TECHNICAL: 4D
+        Computer Programming/Repair: 4D+2
+        Lightsaber Repair: 5D
+        Space Transports Repair: 6D
+        Starfighter Repair: 6D
+        Security: 5D
+
+SPECIAL ABILITIES
+Control: 6D
+         Absorb/Dissipate Energy, Accelerate Healing, Concentration, Enhance Attribute, Hibernation Trance, Resist Stun
+
+Sense: 6D+1
+         Combat Sense, Danger Sense, Life Detection, Life Sense, Magnify Senses, Sense Force
+
+Alter: 6D
+         Telekinesis
+
+Control and Sense
+        Lightsaber Combat
+
+Control Sense and Alter
+        Affect Mind, Projected Fighting
+
+        These are the known powers Anakin Skywalker possessed and it is believed that he had access to other powers.
+
+EQUIPMENT
+         CREDITS - 1,000
+                 Blue Lightsaber, Jedi Robes, Utility Belt, Comlink
+
+FORCE SENSITIVE: Y
+FORCE POINTS: 5
+DARK SIDE POINTS: 1
+CHARACTER POINTS: 9
+
+Description: Anakin Skywalker, a Force-sensitive human male, was a Jedi Knight of the Galactic Republic, a hero of the Clone Wars and the Chosen One of the Jedi Order. During the reign of the Galactic Empire, he was known as Darth Vader, Sith Lord and apprentice to Emperor Darth Sidious. Skywalker was born in 41 BBY, forty-one years before the Battle of Yavin, on the planet Tatooine in the Outer Rim Territories of the galaxy. Although he had a mother, Shmi Skywalker, there was no father involved in Skywalker's conception. This revelation led Qui-Gon Jinn—the Jedi Master who discovered Skywalker and liberated him from slavery—to suspect that Skywalker had been conceived by the midi-chlorians. The Jedi High Council initially rejected Jinn's request to train Skywalker, deeming him too emotional and too old to become a Jedi, but later reversed their decision following the Battle of Naboo where they discovered that the Sith had returned.
